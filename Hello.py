@@ -21,10 +21,10 @@ LOGGER = get_logger(__name__)
 def run():
     st.set_page_config(
         page_title="Hello",
-        page_icon="👋",
+        page_icon="🦦🐠🐟🐡🍣🍤",
     )
 
-    st.write("# This is an otter tool website! 👋")
+    st.write("# This is an otter tool website! 🦦🐠🐟🐡🍣🍤")
 
     st.sidebar.success("Please select which otter tool to use.")
 
@@ -34,7 +34,7 @@ def run():
 
         **👈 Select an otter tool from the sidebar** to see some examples
         of what otter tools can do!
-        
+
         ### Want to learn more?
         - Check about otters [otter.wiki](https://en.wikipedia.org/wiki/Otter)
         

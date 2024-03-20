@@ -14,7 +14,7 @@ def run_calc() -> None:
     # This gives you an extremely simple interaction model.
     a = st.sidebar.slider("number of otters?", 0, 20, 1, 1)
     b = st.sidebar.slider("snacks per otter and day", 0, 10, 3)
-    st.write("You need to provide ",str(a+b)," otter snacks today!")
+    st.write("You need to provide ",str(a*b)," otter snacks today!")
     # Non-interactive elements return a placeholder to their location
     # in the app. Here we're storing progress_bar to update it later.
     # progress_bar = st.sidebar.progress(0)
@@ -27,8 +27,8 @@ def run_calc() -> None:
 
 
 st.set_page_config(page_title="Animation Demo (st.set_page_config.page_title)", page_icon="📹")
-st.markdown("# Otter Snack Amount Calculation")
-st.sidebar.header("Otter Snack Calculator")
+st.markdown("# Otter Snack Amount Calculation 🦦🐠🐟🐡🍣🍤")
+st.sidebar.header("Otter Snack Calculator 🦦")
 st.write(
     "Here you can find the amount of necessary otter snacks:"
 )
