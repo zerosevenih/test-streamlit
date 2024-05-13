@@ -45,8 +45,8 @@ n_rc=st.number_input('number of rc elements:',0,10,1,key='n_rc')+1
 if n_rc>1:
     Rn = np.zeros(n_rc)
     Cn = np.zeros(n_rc)
-    Rn[1]=0.05
-    Cn[1]=500
+    #Rn[1]=0.05
+    #Cn[1]=500
     for i in range(1, n_rc):
         if i==1:
             a=1
