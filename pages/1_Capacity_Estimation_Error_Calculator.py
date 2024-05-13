@@ -38,8 +38,8 @@ def run_calc() -> None:
 
 st.set_page_config(page_title="Capacity Estimation Error Calculator", page_icon="🔋")
 st.markdown("# Capacity estimation error calculator")
-st.write("This calculator can be used to estimate the expected error on the estimated capacity. The error can be caused by different effects.")
-st.write("Please choose SOC range for the estimation as well as errors to consider in the sidbar")
+st.write("This calculator can estimate the expected error in the estimated capacity. Different effects can cause the error.")
+st.write("Please choose the SOC range for the estimation and errors on the sidebar.")
 col1, col2 = st.sidebar.columns(2)
 soc_max = col1.number_input("Upper SOC (%):", value=90, placeholder="Type a number...",key="soc_max")
 soc_min = col2.number_input("Lower SOC (%):", value=10, placeholder="Type a number...",key="soc_min")
@@ -104,7 +104,7 @@ c_min=abs((np.max([soc_min_err1,soc_min_err2])-np.min([soc_max_err1,soc_max_err2
 output1b.latex("C_{min}="+str(round(c_min,2))+"\,Ah")
 output1b.latex("\Delta C=±"+str(round((abs(c-c_min)/c)*100,2))+"\,\%")
 if (abs(c-c_min)/c)*100>5:
-    st.write("⚠️Warning: The error in the capacity estimaten exceeds 5%. This can be problematic, since the ageing related capacity degree has a value range from 20-30% (SOH=70-80%)",color='r')
+    st.write("⚠️Warning: The error in the capacity estimation exceeds 5%. This error can be problematic since the ageing-related capacity degree has a value range from 20-30% (SOH=70-80%)",color='r')
 
 st.write("## Visualisation:")
 
