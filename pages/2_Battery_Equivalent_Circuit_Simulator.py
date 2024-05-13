@@ -43,7 +43,7 @@ t_relax=st.number_input('relaxation duration (s):',0,3600,500,key='t_relax')
 n_rc=st.number_input('number of rc elements:',0,10,1,key='n_rc')+1
 
 if n_rc>1:
-    Rn = np.zeros(n_rc)+0.010*range(1,n_rc)
+    Rn = np.zeros(n_rc)+0.010
     Cn = np.zeros(n_rc)+500
     #Rn[1]=0.05
     #Cn[1]=500
