@@ -43,8 +43,8 @@ t_relax=st.number_input('relaxation duration (s):',0,3600,500,key='t_relax')
 n_rc=st.number_input('number of rc elements:',0,10,1,key='n_rc')+1
 
 if n_rc>1:
-    Rn = np.zeros(n_rc)
-    Cn = np.zeros(n_rc)
+    Rn = np.zeros(n_rc)+0.010
+    Cn = np.zeros(n_rc)+500
     #Rn[1]=0.05
     #Cn[1]=500
     for i in range(1, n_rc):
@@ -52,8 +52,8 @@ if n_rc>1:
             a=1
             #Rn[1]=0.05
             #Cn[1]=500
-        Rn[i] = st.sidebar.slider("R"+str(i)+" in (mOhm)", 0.0, 0.5, float(Rn[i-1]*1.25),0.001,key='R'+str(i))
-        Cn[i] = st.sidebar.slider("C"+str(i)+" in (F)", 0.0, 10000.0, float(Cn[i-1]*1.25),10.0,key='C'+str(i))    
+        Rn[i] = st.sidebar.slider("R"+str(i)+" in (mOhm)", 0.0, 0.5, Rn[i] ,0.001,key='R'+str(i))
+        Cn[i] = st.sidebar.slider("C"+str(i)+" in (F)", 0.0, 10000.0, Cn[i],10.0,key='C'+str(i))    
 
 # Parameters (you can adjust these values)
 OCV = 3.7  # Open-circuit voltage (V)
