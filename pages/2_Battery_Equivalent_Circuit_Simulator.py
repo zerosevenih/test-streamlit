@@ -49,8 +49,8 @@ if n_rc>1:
     Cn[1]=500
     for i in range(1, n_rc):
         if i==1:
-            Rn[1]=0.05
-            Cn[1]=500
+            #Rn[1]=0.05
+            #Cn[1]=500
         Rn[i] = st.sidebar.slider("R"+str(i)+" in (mOhm)", 0.0, 0.5, float(Rn[i-1]*1.25),0.001,key='R'+str(i))
         Cn[i] = st.sidebar.slider("C"+str(i)+" in (F)", 0.0, 10000.0, float(Cn[i-1]*1.25),10.0,key='C'+str(i))    
 
