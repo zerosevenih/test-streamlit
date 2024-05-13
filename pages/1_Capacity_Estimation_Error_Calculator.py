@@ -104,7 +104,7 @@ c_min=abs((np.max([soc_min_err1,soc_min_err2])-np.min([soc_max_err1,soc_max_err2
 output1b.latex("C_{min}="+str(round(c_min,2))+"\,Ah")
 output1b.latex("\Delta C=±"+str(round((abs(c-c_min)/c)*100,2))+"\,\%")
 if (abs(c-c_min)/c)*100>5:
-    st.write("⚠️Warning: The error in the capacity estimation exceeds 5%. This error can be problematic since the ageing-related capacity degree has a value range from 20-30% (SOH=70-80%)",color='r')
+    st.write("⚠️Warning: The error in the capacity estimation exceeds 5%. This error can be problematic since the ageing-related capacity decrease has a value range from 20-30% (SOH=70-80%)",color='r')
 
 st.write("## Visualisation:")
 
