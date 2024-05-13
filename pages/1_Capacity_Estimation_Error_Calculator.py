@@ -82,11 +82,11 @@ else:
 err_max=err_max+val_tcv+val_relax
 err_min=-err_min-val_tcv-val_relax
 
-soc_max_err1=np.interp(ocv_max+err_max/1000,ocvmean,soc)-err_hys_max_lo
-soc_max_err2=np.interp(ocv_max-err_max/1000,ocvmean,soc)-err_hys_max_up
+soc_max_err1=np.interp(ocv_max-err_max/1000,ocvmean,soc)-err_hys_max_lo
+soc_max_err2=np.interp(ocv_max+err_max/1000,ocvmean,soc)-err_hys_max_up
 
-soc_min_err1=np.interp(ocv_min+err_min/1000,ocvmean,soc)-err_hys_min_lo
-soc_min_err2=np.interp(ocv_min-err_min/1000,ocvmean,soc)-err_hys_min_up
+soc_min_err1=np.interp(ocv_min-err_min/1000,ocvmean,soc)-err_hys_min_lo
+soc_min_err2=np.interp(ocv_min+err_min/1000,ocvmean,soc)-err_hys_min_up
 
 #st.write(str(err_hys_min_up))
 
