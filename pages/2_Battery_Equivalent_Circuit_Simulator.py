@@ -26,9 +26,9 @@ def run_calc() -> None:
 
 
 st.set_page_config(page_title="Battery Equivalent Circuit Simulator", page_icon="🔋")
-st.markdown("# This is an equivalent circuit simulator")
+st.markdown("# This is an equivalent circuit simulator.")
 st.sidebar.header("Model parameters")
-st.write('The influence of the open circuit voltage change due to the state-of-charge change because of the current pulse is currently not depicted.')
+st.write('The influence of the open circuit voltage change due to the state-of-charge change due to the current pulse is not depicted.')
 
 
 import numpy as np
