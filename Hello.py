@@ -24,23 +24,23 @@ def run():
         page_icon=" 🔋",
     )
 
-    st.write("# This is a battery web-application, for explaining battery behaviour with interactiv tools")
+    st.write("# This is a battery web application for explaining battery behaviour with interactive tools.")
 
     st.sidebar.success("Please select tool from above")
 
     st.markdown(
         """
-        👈 Please try a tool form the sidebar
+        👈 Please try a tool from the sidebar
 
         
     """
     )
 
     st.markdown('### Capacity Estimation Error Calculator')
-    st.write('This tool can simulate the expected error on the capacity estimation using the OCV-method. With the provided OCV-SOC curve and a given error (for example in the voltage measurement), the impact of this error on the capacity estimation can be visualised.')
+    st.write('This tool can simulate the expected error in capacity estimation using  the OCV method. With the provided OCV-SOC curve and a given error (for  example, in the voltage measurement), the impact of this error on the  capacity estimation can be visualised.')
 
     st.markdown('### Battery Equivalent Circuit Simulator')
-    st.write('This tool enables to simulate the voltage response to a current pulse with a RC-elements equivalent circuit model. The number of RC elements, their parameters as well as pulse and relaxation duration can be choosen and altered.')
+    st.write('This tool enables the simulation of the voltage response to a current pulse with an equivalent circuit model based on RC elements. The number of RC elements, their parameters, and pulse and relaxation duration can be chosen and altered.')
 
 
 
